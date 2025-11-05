@@ -1,0 +1,15 @@
+<div>
+    <h1>Accordion exercise</h1>
+    
+    <div *ngFor="let section of sections" (click)="toggle(section.id)">
+        {{section.title}}
+        <span>
+            {{ section.isOpen ? '▲' : '▼'}}
+        </span>
+
+        <div *ngIf="section.isOpen">
+            {{ section.content }}
+        </div>
+    </div>
+
+</div>
