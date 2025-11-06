@@ -1,6 +1,20 @@
-# SdfAngular
+# Angular camp
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+
+
+## Roadmap (in progress)
+
+We will cover angular
+
+0. Intro to Angular 
+1. Counter
+2. Accordion
+3. Contact 
+
+Everything will be edited soon.
+
+# Angular Setup
 
 ## Development server
 
