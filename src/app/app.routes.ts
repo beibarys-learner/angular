@@ -3,10 +3,12 @@ import { CounterComponent } from './problems/counter/counter.component';
 import { AccordionComponent } from './problems/accordion/accordion.component';
 import { ContactComponent } from './problems/contact/contact.component';
 import { HolyGrailComponent } from './problems/holy-grail/holy-grail.component';
+import { FlightBookerComponent } from './problems/flight-booker/flight-booker.component';
 
 export const routes: Routes = [
     {path: "counter", component: CounterComponent},
     {path: "accordion", component: AccordionComponent},
     {path: "contact", component: ContactComponent},
-    { path: 'holy-grail', component: HolyGrailComponent }
+    {path: 'holy-grail', component: HolyGrailComponent},
+    {path: 'booking', component: FlightBookerComponent}
 ];

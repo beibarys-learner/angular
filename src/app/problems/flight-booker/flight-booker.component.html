@@ -1,0 +1,14 @@
+<div>
+    <h1>Flight Booking</h1>
+    <form [formGroup]="flightForm" (ngSubmit)="onSubmit()">
+        <select formControlName="flightType">
+            <option value="one-way">One-way flight</option>
+            <option value="round-trip">Round-trip flight</option>
+        </select>
+        <input type="date" formControlName="departureDate">
+        <input type="date" formControlName="returnDate" *ngIf="isRoundTrip()">
+        <button type="submit">Book</button>
+        <div *ngIf="successMessage">{{ successMessage }}</div>
+        <div *ngIf="errorMessage">{{ errorMessage }}</div>
+    </form>
+</div>
