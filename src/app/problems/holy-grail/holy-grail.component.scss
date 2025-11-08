@@ -1,0 +1,59 @@
+$font-family_1: sans-serif;
+$background-color_1: tomato;
+$background-color_2: coral;
+$background-color_3: moccasin;
+$background-color_4: sandybrown;
+$background-color_5: slategray;
+
+body {
+	font-family: $font-family_1;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	min-height: 100vh;
+}
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+* {
+	box-sizing: border-box;
+}
+
+header {
+	padding: 12px;
+	text-align: center;
+	background-color: $background-color_1;
+	height: 60px;
+}
+.columns {
+	display: flex;
+	flex-grow: 1;
+}
+nav {
+	padding: 12px;
+	text-align: center;
+	background-color: $background-color_2;
+	flex-shrink: 0;
+	width: 100px;
+}
+main {
+	padding: 12px;
+	text-align: center;
+	background-color: $background-color_3;
+	flex-grow: 1;
+}
+aside {
+	padding: 12px;
+	text-align: center;
+	background-color: $background-color_4;
+	flex-shrink: 0;
+	width: 100px;
+}
+footer {
+	padding: 12px;
+	text-align: center;
+	background-color: $background-color_5;
+	height: 100px;
+}

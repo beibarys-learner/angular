@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -14,4 +14,11 @@ import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 })
 export class AppComponent {
   title = 'sdf-angular';
+
+  constructor(public router: Router) {}
+
+  // Проверяем, нужно ли показывать navbar
+  shouldShowNavbar(): boolean {
+    return this.router.url !== '/holy-grail';
+  }
 }
