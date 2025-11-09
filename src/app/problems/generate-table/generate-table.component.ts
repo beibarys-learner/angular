@@ -5,7 +5,6 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 @Component({
   selector: 'app-generate-table',
   imports: [CommonModule, ReactiveFormsModule],
-
   templateUrl: './generate-table.component.html',
   styleUrl: './generate-table.component.scss'
 })

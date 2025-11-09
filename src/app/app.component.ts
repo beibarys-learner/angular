@@ -7,13 +7,14 @@ import { RouterOutlet, RouterLink, RouterLinkActive, Router } from '@angular/rou
   imports: [
     RouterOutlet,
     RouterLink,
-    RouterLinkActive  // This is needed for routerLinkActiveOptions
-  ],
+    RouterLinkActive // This is needed for routerLinkActiveOptions
+    ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'sdf-angular';
+
 
   constructor(public router: Router) {}
 
