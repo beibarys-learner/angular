@@ -21,8 +21,8 @@ export class FlightBookerComponent {
       departureDate: ['', Validators.required],
       returnDate: ['']
     });
-
   }
+  
   isRoundTrip(): boolean {
     return this.flightForm.get('flightType')?.value === 'round-trip';
   }

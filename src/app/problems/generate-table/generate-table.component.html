@@ -1,0 +1,65 @@
+<div class="container">
+  <h2>Table Generator</h2>
+  
+  <form [formGroup]="tableForm" (ngSubmit)="generateTable()" class="form">
+    <div class="form-group">
+      <label for="rows">Number of Rows:</label>
+      <input 
+        type="number" 
+        id="rows" 
+        formControlName="rows"
+        placeholder="Enter rows (1-20)"
+        class="form-control"
+      />
+      <div class="error" *ngIf="tableForm.get('rows')?.invalid && tableForm.get('rows')?.touched">
+        <small *ngIf="tableForm.get('rows')?.errors?.['required']">Rows is required</small>
+        <small *ngIf="tableForm.get('rows')?.errors?.['min']">Minimum value is 1</small>
+        <small *ngIf="tableForm.get('rows')?.errors?.['max']">Maximum value is 20</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="columns">Number of Columns:</label>
+      <input 
+        type="number" 
+        id="columns" 
+        formControlName="columns"
+        placeholder="Enter columns (1-20)"
+        class="form-control"
+      />
+      <div class="error" *ngIf="tableForm.get('columns')?.invalid && tableForm.get('columns')?.touched">
+        <small *ngIf="tableForm.get('columns')?.errors?.['required']">Columns is required</small>
+        <small *ngIf="tableForm.get('columns')?.errors?.['min']">Minimum value is 1</small>
+        <small *ngIf="tableForm.get('columns')?.errors?.['max']">Maximum value is 20</small>
+      </div>
+    </div>
+
+    <div class="button-group">
+      <button 
+        type="submit" 
+        [disabled]="tableForm.invalid"
+        class="btn btn-primary"
+      >
+        Generate Table
+      </button>
+      <button 
+        type="button" 
+        (click)="resetTable()"
+        class="btn btn-secondary"
+      >
+        Reset
+      </button>
+    </div>
+  </form>
+
+  <div class="table-container" *ngIf="showTable">
+    <h3>Generated Table ({{ tableData.length }} x {{ tableData[0]?.length }})</h3>
+    <table class="data-table">
+      <tbody>
+        <tr *ngFor="let row of tableData">
+          <td *ngFor="let cell of row">{{ cell }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

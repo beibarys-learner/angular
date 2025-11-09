@@ -1,0 +1,29 @@
+<div>
+    <h1>Generate table component</h1>
+    <form [formGroup]="tableForm" (ngSubmit)="onSubmit()">
+        <div>
+        <label>
+            Rows:
+            <input type="number" formControlName="rows" min="1" />
+        </label>
+        </div>
+        
+        <div>
+        <label>
+            Columns:
+            <input type="number" formControlName="columns" min="1" />
+        </label>
+        </div>
+        
+        <button type="submit" [disabled]="tableForm.invalid">Generate Table</button>
+    </form>
+
+    <div *ngIf="tableData.length > 0">
+        <h3>Generated Table</h3>
+        <table border="1">
+        <tr *ngFor="let row of tableData">
+            <td *ngFor="let cell of row">{{ cell }}</td>
+        </tr>
+        </table>
+    </div>
+</div>
