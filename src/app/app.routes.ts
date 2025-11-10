@@ -7,6 +7,7 @@ import { FlightBookerComponent } from './problems/flight-booker/flight-booker.co
 import { GenerateTableComponent } from './problems/generate-table/generate-table.component';
 import { GenerateTable2Component } from './problems/generate-table2/generate-table2.component';
 import { ProgressContainerComponent } from './problems/progress-container/progress-container.component';
+import { TemperatureConverterComponent } from './problems/temperature-converter/temperature-converter.component';
 
 export const routes: Routes = [
     {path: "counter", component: CounterComponent},
@@ -16,5 +17,6 @@ export const routes: Routes = [
     {path: 'booking', component: FlightBookerComponent},
     {path: 'table-1', component: GenerateTableComponent},
     {path: 'table-2', component: GenerateTable2Component},
-    {path: 'progress', component: ProgressContainerComponent}
+    {path: 'progress', component: ProgressContainerComponent},
+    {path: 'temp', component: TemperatureConverterComponent}
 ];

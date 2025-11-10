@@ -1,0 +1,19 @@
+.temperature-converter {
+  display: flex;
+  
+  &-column {
+    &-top-row {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+      height: 24px;
+      padding: 4px;
+      text-align: center;
+    }
+    
+    &-bottom-row {
+      padding: 4px;
+      text-align: center;
+    }
+  }
+}
